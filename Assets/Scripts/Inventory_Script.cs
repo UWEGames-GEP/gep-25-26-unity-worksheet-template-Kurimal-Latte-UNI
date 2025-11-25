@@ -39,4 +39,17 @@ public class Inventory_Script : MonoBehaviour
     }
 
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Debug.Log(hit.gameObject.name);
+        ItemObject collisionItem = hit.gameObject.GetComponent<ItemObject>();
+
+        if (collisionItem != null)
+        {
+            items.Add(collisionItem.name);
+        }
+
+        Destroy(collisionItem.gameObject);
+    }
+
 }
