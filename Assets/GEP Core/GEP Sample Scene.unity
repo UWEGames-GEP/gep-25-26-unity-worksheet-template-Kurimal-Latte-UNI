@@ -432,9 +432,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1845782802}
-    - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1845782809}
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
 --- !u!1001 &563696883
 PrefabInstance:
@@ -1416,18 +1413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   gameManager: {fileID: 173118955}
---- !u!114 &1845782809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513238879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eda0b2650d941d4493cb4a832224cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1845782814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,7 +1429,7 @@ MonoBehaviour:
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
-  LandingAudioClip: {fileID: 0}
+  LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
   FootstepAudioClips: []
   FootstepAudioVolume: 0.5
   JumpHeight: 1.2
@@ -1712,7 +1697,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 489568094961798936, guid: 93e2cf4fd060d574c9e5b9c7c4f02041, type: 3}
       propertyPath: m_Name
-      value: ItemCube
+      value: Generic Orb 3
       objectReference: {fileID: 0}
     - target: {fileID: 4189895458820551197, guid: 93e2cf4fd060d574c9e5b9c7c4f02041, type: 3}
       propertyPath: m_LocalPosition.x

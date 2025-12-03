@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "Player Input",
     "maps": [
         {
@@ -45,6 +46,15 @@
                     "name": "Pause",
                     "type": "Button",
                     "id": "c6f92e0d-acbd-41fc-a9f6-5136dd70b3c4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RemoveItem",
+                    "type": "Button",
+                    "id": "a1f47282-84ba-4016-a13f-61fa6fd248f5",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -236,6 +246,17 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e7474451-1113-48dc-81cd-5b0a788740d0",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "RemoveItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

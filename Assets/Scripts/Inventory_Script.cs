@@ -49,7 +49,16 @@ public class Inventory_Script : MonoBehaviour
             items.Add(collisionItem.name);
         }
 
-        Destroy(collisionItem.gameObject);
+        collisionItem.gameObject.SetActive(false);
     }
 
+    public void AddItemToInventory(ItemObject item)
+    {
+        items.Add(item);
+    }
+
+    public void RemoveItemFromInventory(ItemObject item)
+    {
+        items.Remove(item);
+    }
 }
