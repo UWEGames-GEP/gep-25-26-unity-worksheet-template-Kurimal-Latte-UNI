@@ -9,6 +9,14 @@ public class PlayerCharacterController : ThirdPersonController
     }
     private void OnRemoveItem(InputValue value)
     {
-        if (value.isPressed){ Debug.Log("Item Remove"); GetComponent<Inventory_Script>().RemoveItemFromInventory(); }
+        if (value.isPressed)
+        {
+            Debug.Log("Item Remove");
+            GetComponent<Inventory_Script>().RemoveItemFromInventory();
+        }
+
+
     }
+
+
 }

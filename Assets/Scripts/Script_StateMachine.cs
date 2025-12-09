@@ -6,9 +6,9 @@ public class GameManager : MonoBehaviour
 {
 
     [Serializable]
-    enum GameState {GAMEPLAY,PAUSE}
+    public enum GameState {GAMEPLAY,PAUSE}
     [SerializeField]
-    GameState state = GameState.GAMEPLAY;
+    public GameState state = GameState.GAMEPLAY;
     bool StateChanged = false;
 
 
