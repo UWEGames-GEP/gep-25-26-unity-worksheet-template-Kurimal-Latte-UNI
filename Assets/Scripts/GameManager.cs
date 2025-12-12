@@ -41,12 +41,14 @@ public class GameManager : MonoBehaviour
                 state = GameState.GAMEPLAY;
                 StateChanged = true;
                 InventoryUI.SetActive(false);
-                
+
             }
         }
 
-        
+
     }
+
+   
     private void LateUpdate()
     {
         if (StateChanged)

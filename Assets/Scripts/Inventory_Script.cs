@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEditor.Search;
+
 using System;
 
 
@@ -10,8 +10,7 @@ public class Inventory_Script : MonoBehaviour
     public List<ItemObject> items = new List<ItemObject>();
     public GameManager gameManager;
     Transform worldItemsTransform;
-
-
+  
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -62,15 +61,7 @@ public class Inventory_Script : MonoBehaviour
 
     public void RemoveItemFromInventory(ItemObject item)
     {
-        items.Remove(item);
-    }
-    
-    public void RemoveItemFromInventory()
-    {
-        if (gameManager.state == GameManager.GameState.GAMEPLAY && items.Count > 0)
-        {
-            ItemObject item = items[0];
-            
+     
             Vector3 currentPosition = transform.position;
             Vector3 forward = transform.forward;
 
@@ -81,13 +72,31 @@ public class Inventory_Script : MonoBehaviour
             Quaternion newRotation = currentRotation * Quaternion.Euler(0, 0, 180);
 
             GameObject newItem = Instantiate(item.gameObject, newPosition, newRotation, worldItemsTransform);
-      
+
             newItem.SetActive(true);
 
             items.Remove(item);
+
+            Destroy(item.gameObject);
        
-            Destroy(item.gameObject);   
+    }
+
+    public void RemoveItemFromInventory()
+    {
+        if (gameManager.state == GameManager.GameState.GAMEPLAY && items.Count > 0)
+        {
+            ItemObject item = items[0];
+            RemoveItemFromInventory(item);
         }
     }
+    public void RemoveItemFromInventory(int i)
+    {
+        if (i < items.Count)
+        {
+            RemoveItemFromInventory(items[i]);
+        }
+    }
+  
+
 
 }

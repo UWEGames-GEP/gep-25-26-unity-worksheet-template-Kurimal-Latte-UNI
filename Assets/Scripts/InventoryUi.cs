@@ -35,7 +35,11 @@ public class InventoryUi : MonoBehaviour
 
 
     }
-
+    public void OnInventoryUIButton(int i)
+    {
+        inventory.RemoveItemFromInventory(i);
+        RefreshInventoryUI();
+    }
     void Start()
     {
         

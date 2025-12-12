@@ -8,17 +8,8 @@ public class InventoryUIButton : MonoBehaviour
 
     public void Setbutton(ItemObject item)
     {
-        text.text = item.name;
+        text.text = item.itemname;
     }
-
-
-
-
-
-
-
-
-
 
 
 
